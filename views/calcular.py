@@ -68,7 +68,7 @@ class CalcularView(tk.Frame):
             })
 
             self._definir_resultado(
-                f"Emergia: {round(emergia, 2)}     Fluxo: {[round(v, 2) for v in fluxo]}"
+                f"Emergia: {round(emergia, 2)}     Fluxo: {[float(round(v, 2)) for v in fluxo]}"
             )
         except Exception as e:
             self._definir_resultado(f"Erro: {e}", erro=True)

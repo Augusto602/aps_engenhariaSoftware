@@ -16,11 +16,10 @@ def calcular_emergia(matriz, entrada, transformidade):
         raise Exception("Transformidade incompatível")
 
     I = np.eye(len(A))
-
-    # 🔥 LINHA MAIS IMPORTANTE
+    
     inversa = np.linalg.inv(I - A)
 
-    # 🔥 cálculo correto
+
     x = inversa.dot(f)
 
     emergia = T.dot(x)
